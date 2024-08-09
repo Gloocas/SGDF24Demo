@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnsg60g0h6d0y"]
+
+[ext_resource type="Script" path="res://src/network.gd" id="1_nku6s"]
+
+[node name="Network" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nku6s")
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -46.5
+offset_right = 132.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Host
+"
+
+[node name="Join" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.0
+offset_top = -93.0
+offset_right = 132.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Join
+"
+
+[node name="Server_IP" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -142.0
+offset_top = 90.0
+offset_right = 148.0
+offset_bottom = 142.0
+grow_horizontal = 2
+placeholder_text = "enter server IP"
+alignment = 1
+
+[node name="Server_Port" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.0
+offset_top = 153.0
+offset_right = 86.0
+offset_bottom = 205.0
+grow_horizontal = 2
+placeholder_text = "enter server PORT"
+alignment = 1
+
+[node name="Device_IP" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="Join" to="." method="_on_join_pressed"]
