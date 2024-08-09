@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://txh0duxm3sx0"]
+
+[ext_resource type="PackedScene" uid="uid://dpi7a4qfsh1wm" path="res://scenes/player.tscn" id="1_w4puw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81qwx"]
+size = Vector2(467, 306)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4wm8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkr3j"]
+size = Vector2(80, 73)
+
+[node name="BaseRoom" type="Area2D"]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -2
+position = Vector2(-58.5, -43)
+shape = SubResource("RectangleShape2D_81qwx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D"]
+modulate = Color(0.389287, 0.389287, 0.389287, 1)
+z_index = -2
+z_as_relative = false
+position = Vector2(0.499996, -3.8147e-06)
+scale = Vector2(466, 304)
+mesh = SubResource("BoxMesh_4wm8r")
+
+[node name="Player" parent="." instance=ExtResource("1_w4puw")]
+position = Vector2(43, 12)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="TestArea" type="Area2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="TestArea"]
+modulate = Color(0.389287, 0.389287, 0.389287, 1)
+z_index = -2
+z_as_relative = false
+position = Vector2(284, -78)
+scale = Vector2(80.5, 75)
+mesh = SubResource("BoxMesh_4wm8r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TestArea"]
+position = Vector2(284, -78.5)
+shape = SubResource("RectangleShape2D_lkr3j")
