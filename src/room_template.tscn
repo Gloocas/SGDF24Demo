@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjowidxsi0cbp"]
+
+[ext_resource type="Texture2D" uid="uid://doiki4rur0oin" path="res://assets/TilesetsDownload/Tileset-Terrain2.png" id="1_3yh6k"]
+[ext_resource type="Texture2D" uid="uid://c7wxl7finxby1" path="res://assets/tilemapTest.png" id="2_28vhp"]
+[ext_resource type="PackedScene" uid="uid://dpi7a4qfsh1wm" path="res://src/player.tscn" id="2_fbbpv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m637s"]
+texture = ExtResource("1_3yh6k")
+texture_region_size = Vector2i(32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_1/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_1/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_1/angular_velocity = 0.0
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_1/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_1/angular_velocity = 0.0
+3:5/0 = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_1/angular_velocity = 0.0
+3:6/0 = 0
+3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+3:6/0/physics_layer_1/angular_velocity = 0.0
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+2:6/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_1/angular_velocity = 0.0
+1:6/0 = 0
+1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/0/physics_layer_0/angular_velocity = 0.0
+1:6/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+1:6/0/physics_layer_1/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_1/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_1/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_1/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lap5y"]
+texture = ExtResource("2_28vhp")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_1/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_1/angular_velocity = 0.0
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_c728j"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 8
+physics_layer_1/collision_layer = 1
+physics_layer_1/collision_mask = 2
+sources/1 = SubResource("TileSetAtlasSource_m637s")
+sources/2 = SubResource("TileSetAtlasSource_lap5y")
+
+[node name="RoomTemplate" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_c728j")
+format = 2
+layer_0/tile_data = PackedInt32Array(131076, 65538, 0, 131077, 65538, 0, 131078, 65538, 0, 131079, 65538, 0, 131080, 65538, 0, 131081, 65538, 0, 131082, 65538, 0, 131083, 2, 0, 131084, 2, 0, 131085, 2, 0, 131086, 2, 0, 131087, 2, 0, 131088, 2, 0, 131089, 2, 0, 131090, 2, 0, 131091, 2, 0, 131092, 2, 0, 131075, 65538, 0, 131093, 2, 0, 196611, 65538, 0, 262147, 65538, 0, 327683, 65538, 0, 393219, 65538, 0, 458755, 65538, 0, 524291, 65538, 0, 589827, 65538, 0, 655363, 2, 0, 720899, 2, 0, 786435, 2, 0, 196629, 2, 0, 262165, 2, 0, 327701, 2, 0, 393237, 2, 0, 458773, 2, 0, 524309, 2, 0, 589845, 2, 0, 655381, 2, 0, 720917, 2, 0, 786453, 2, 0, 851971, 2, 0, 851989, 2, 0, 851972, 2, 0, 851973, 2, 0, 851974, 2, 0, 851975, 2, 0, 851976, 2, 0, 851977, 2, 0, 851978, 2, 0, 851979, 2, 0, 851980, 2, 0, 851981, 2, 0, 851982, 2, 0, 851983, 2, 0, 851984, 2, 0, 851985, 2, 0, 851986, 2, 0, 851987, 2, 0, 851988, 2, 0, 327691, 2, 0, 262155, 2, 0, 196619, 2, 0, 196618, 2, 0, 196617, 2, 0, 196616, 2, 0, 196615, 2, 0, 196614, 2, 0, 196613, 2, 0, 196612, 2, 0, 262148, 2, 0, 327684, 2, 0, 393220, 2, 0, 458756, 2, 0, 524292, 2, 0, 589828, 2, 0, 655364, 2, 0, 720900, 2, 0, 786436, 2, 0, 786437, 2, 0, 720901, 2, 0, 655365, 2, 0, 589829, 2, 0, 524293, 2, 0, 458757, 2, 0, 393221, 2, 0, 327685, 2, 0, 262149, 2, 0, 262150, 2, 0, 327686, 2, 0, 393222, 2, 0, 458758, 2, 0, 524294, 2, 0, 589830, 2, 0, 655366, 2, 0, 720902, 2, 0, 786438, 2, 0, 786439, 2, 0, 720903, 2, 0, 655367, 2, 0, 589831, 2, 0, 524295, 2, 0, 458759, 2, 0, 393223, 2, 0, 327687, 2, 0, 262151, 2, 0, 262152, 2, 0, 327688, 2, 0, 393224, 2, 0, 458760, 2, 0, 524296, 2, 0, 589832, 2, 0, 655368, 2, 0, 720904, 2, 0, 786440, 2, 0, 786441, 2, 0, 720905, 65538, 0, 655369, 65538, 0, 589833, 65538, 0, 524297, 2, 0, 458761, 2, 0, 393225, 2, 0, 327689, 2, 0, 262153, 2, 0, 262154, 2, 0, 327690, 2, 0, 393226, 2, 0, 458762, 2, 0, 524298, 2, 0, 589834, 2, 0, 655370, 2, 0, 720906, 65538, 0, 786442, 2, 0, 786443, 2, 0, 720907, 65538, 0, 655371, 2, 0, 589835, 2, 0, 524299, 2, 0, 458763, 2, 0, 393227, 2, 0, 393228, 2, 0, 327692, 2, 0, 262156, 2, 0, 196620, 2, 0, 196621, 2, 0, 262157, 2, 0, 327693, 2, 0, 393229, 2, 0, 458765, 2, 0, 458764, 2, 0, 524300, 2, 0, 589836, 2, 0, 655372, 2, 0, 720908, 65538, 0, 786444, 2, 0, 786445, 2, 0, 720909, 65538, 0, 655373, 65538, 0, 589837, 65538, 0, 524301, 2, 0, 524302, 2, 0, 458766, 2, 0, 393230, 2, 0, 327694, 2, 0, 262158, 2, 0, 196622, 2, 0, 196623, 2, 0, 262159, 2, 0, 327695, 2, 0, 393231, 2, 0, 458767, 2, 0, 524303, 2, 0, 589839, 2, 0, 589838, 2, 0, 655374, 2, 0, 720910, 2, 0, 786446, 2, 0, 786447, 2, 0, 720911, 2, 0, 655375, 2, 0, 655376, 2, 0, 589840, 2, 0, 524304, 2, 0, 458768, 2, 0, 393232, 2, 0, 327696, 2, 0, 262160, 2, 0, 196624, 2, 0, 196625, 2, 0, 262161, 2, 0, 327697, 2, 0, 393233, 2, 0, 458769, 2, 0, 524305, 2, 0, 589841, 2, 0, 655377, 2, 0, 720913, 2, 0, 720912, 2, 0, 786448, 2, 0, 786449, 2, 0, 786450, 2, 0, 720914, 2, 0, 655378, 2, 0, 589842, 2, 0, 524306, 2, 0, 458770, 2, 0, 393234, 2, 0, 327698, 2, 0, 262162, 2, 0, 196626, 2, 0, 196627, 2, 0, 262163, 2, 0, 327699, 2, 0, 393235, 2, 0, 458771, 2, 0, 524307, 2, 0, 589843, 2, 0, 655379, 2, 0, 720915, 2, 0, 786451, 2, 0, 786452, 2, 0, 720916, 2, 0, 655380, 2, 0, 589844, 2, 0, 524308, 2, 0, 458772, 2, 0, 393236, 2, 0, 327700, 2, 0, 262164, 2, 0, 196628, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 917512, 2, 0, 917513, 2, 0, 917514, 2, 0, 917515, 2, 0, 917516, 2, 0, 917517, 2, 0, 917518, 2, 0, 917519, 2, 0, 917520, 2, 0, 917521, 2, 0, 917522, 2, 0, 917523, 2, 0, 917524, 2, 0, 917525, 2, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_fbbpv")]
+position = Vector2(328, 186)

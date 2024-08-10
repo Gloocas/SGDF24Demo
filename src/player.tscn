@@ -1,14 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpi7a4qfsh1wm"]
+[gd_scene load_steps=9 format=3 uid="uid://dpi7a4qfsh1wm"]
 
 [ext_resource type="Script" path="res://src/player.gd" id="1_3kq2g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4yy8p"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f6ioa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1iel"]
 size = Vector2(10, 7)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vljjj"]
-size = Vector2(16, 22)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_txxt8"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_yxpap"]
 
@@ -22,12 +23,14 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 13
 script = ExtResource("1_3kq2g")
 
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4yy8p")
+
 [node name="FloorChecker" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 3
+collision_layer = 8
+collision_mask = 4
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="FloorChecker"]
 position = Vector2(3.57628e-07, 4.20213e-06)
@@ -38,8 +41,12 @@ mesh = SubResource("CapsuleMesh_f6ioa")
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_n1iel")
 
-[node name="HurtBox" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_vljjj")
+[node name="HurtArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="HurtBox" type="CollisionShape2D" parent="HurtArea"]
+shape = SubResource("CapsuleShape2D_txxt8")
 
 [node name="Shadow" type="MeshInstance2D" parent="."]
 modulate = Color(0.172833, 0.172833, 0.172833, 0.345098)

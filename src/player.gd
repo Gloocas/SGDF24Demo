@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var floorArea := $FloorChecker
 @onready var animPlayer := $AnimationPlayer
-@onready var hurtBox := $HurtBox
+@onready var hurtBox := $HurtArea/HurtBox
 
 var Speed := 0.0
 var topSpeed := 150.0
@@ -65,7 +65,7 @@ func dodge():
 func handle_input(delta):
 	hDirection = Input.get_axis("Left", "Right")
 	vDirection = Input.get_axis("Up", "Down")
-	if floorArea.has_overlapping_areas(): #if player's area isn't within floor area, remove movement and add gravity
+	if floorArea.has_overlapping_bodies(): #if player's area isn't within floor area, remove movement and add gravity
 		if hDirection and vDirection:
 			Speed = move_toward(Speed, topSpeed, SPEED_INC) #slowed velocity's to account for increased movement
 			velocity.x = hDirection * Speed / 1.4
