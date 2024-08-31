@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8hac8r2q4gfu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a3bkw"]
+
+[node name="TeleportNode" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(0, 4.76837e-07)
+scale = Vector2(4, 2)
+mesh = SubResource("CapsuleMesh_a3bkw")

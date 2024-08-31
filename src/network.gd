@@ -8,7 +8,7 @@ signal player_connected(peer_id, player_info)
 signal player_disconnected(peer_id)
 signal server_disconnected
 
-#const PORT = 7000
+const PORT = 7000
 const DEFAULT_SERVER_IP = "127.0.0.1" # IPv4 localhost
 const MAX_CONNECTIONS = 20
 
@@ -35,11 +35,11 @@ func _ready():
 	#Device_IP.text = Network.ip_address
 
 
-func join_game(address = "", port = 7000):
+func join_game(address = ""):
 	if address.is_empty():
 		address = DEFAULT_SERVER_IP
 	var peer = ENetMultiplayerPeer.new()
-	var error = peer.create_client(address, port)
+	var error = peer.create_client(address, PORT)
 	if error:
 		return error
 	multiplayer.multiplayer_peer = peer
@@ -113,7 +113,7 @@ func _on_server_disconnected():
 
 func _on_join_pressed():
 	print(Server_IP.text)
-	join_game(Server_IP.text, Server_Port.text)
+	join_game(Server_IP.text)
 
 func _on_host_pressed():
 	create_game()
