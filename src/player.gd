@@ -18,20 +18,18 @@ var canDodge := true
 var hDirection := 0.0
 var vDirection := 0.0 
 
+func _enter_tree():
+	set_multiplayer_authority(name.to_int())
  
 func _physics_process(delta):
-	#print(canDash)
-	handle_input(delta)
-	if Input.is_action_just_pressed("Dash"):
-		dash()
-	elif Input.is_action_just_pressed("Dodge"):
-		dodge()
-		
+	if is_multiplayer_authority():
+		handle_input(delta)
+		if Input.is_action_just_pressed("Dash"):
+			dash()
+		elif Input.is_action_just_pressed("Dodge"):
+			dodge()
 	move_and_slide()
-	
-	
-	
-	
+
 func dash():
 	if canDash:
 		Speed *= 3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpi7a4qfsh1wm"]
+[gd_scene load_steps=10 format=3 uid="uid://dpi7a4qfsh1wm"]
 
 [ext_resource type="Script" path="res://src/player.gd" id="1_3kq2g"]
 
@@ -21,6 +21,11 @@ resource_name = "shadow"
 _data = {
 "shadow": SubResource("Animation_t7s8k")
 }
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_w62dd"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -62,3 +67,6 @@ mesh = SubResource("SphereMesh_yxpap")
 libraries = {
 "": SubResource("AnimationLibrary_p735k")
 }
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_w62dd")

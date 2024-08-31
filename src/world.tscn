@@ -6,3 +6,7 @@
 script = ExtResource("1_alck7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://src/player.tscn")
+spawn_path = NodePath("..")
