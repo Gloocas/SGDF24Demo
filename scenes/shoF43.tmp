@@ -1,0 +1,15 @@
+[gd_scene load_steps=8 format=3 uid="uid://co18toxk7f3ay"]
+
+[ext_resource type="Script" path="res://shopslot.gd" id="1_6uoii"]
+[ext_resource type="Resource" uid="uid://jpuckup2ysdf" path="res://scenes/testitem1.tres" id="2_616rp"]
+[ext_resource type="Resource" uid="uid://cqn0ele74b68w" path="res://scenes/testitem2.tres" id="3_7hb5r"]
+[ext_resource type="Resource" uid="uid://dip76wcgkenut" path="res://scenes/testitem3.tres" id="4_erwgv"]
+[ext_resource type="Resource" uid="uid://pyx770uoos3s" path="res://scenes/testitem4.tres" id="5_h4527"]
+[ext_resource type="Resource" uid="uid://bojkwl34xxdok" path="res://scenes/testitem5.tres" id="6_c6h51"]
+[ext_resource type="Resource" uid="uid://bgdmuhqn7tuqe" path="res://scenes/testitem6.tres" id="7_jhi3h"]
+
+[node name="ShopSlot" type="Node2D"]
+script = ExtResource("1_6uoii")
+items = Array[Resource("res://scenes/item.gd")]([ExtResource("2_616rp"), ExtResource("3_7hb5r"), ExtResource("4_erwgv"), ExtResource("5_h4527"), ExtResource("6_c6h51"), ExtResource("7_jhi3h")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

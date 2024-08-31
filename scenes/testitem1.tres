@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://jpuckup2ysdf"]
+
+[ext_resource type="Script" path="res://scenes/item.gd" id="1_2ykhv"]
+[ext_resource type="Texture2D" uid="uid://b0d88qmxqrbxr" path="res://scenes/testitem1.png" id="2_exsu7"]
+
+[resource]
+script = ExtResource("1_2ykhv")
+sprite = ExtResource("2_exsu7")
+name = "Spectral Cloak"
+health = 10.0
+mana = 0.0
+speed = 5.0
+cooldown = 0.0
+value = 10
+type = 0
+damage = 0.0
+attackSpeed = 0.0
+manaCost = 0.0

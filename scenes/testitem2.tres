@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cqn0ele74b68w"]
+
+[ext_resource type="Script" path="res://scenes/item.gd" id="1_s3f1m"]
+[ext_resource type="Texture2D" uid="uid://bscw2jyv3jq4d" path="res://scenes/testitem2.png" id="2_1x2p1"]
+
+[resource]
+script = ExtResource("1_s3f1m")
+sprite = ExtResource("2_1x2p1")
+name = "Ghoulish Gourd"
+health = 0.0
+mana = 10.0
+speed = 0.0
+cooldown = 0.5
+value = 15
+type = 1
+damage = 0.0
+attackSpeed = 0.0
+manaCost = 0.0

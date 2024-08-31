@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dip76wcgkenut"]
+
+[ext_resource type="Script" path="res://scenes/item.gd" id="1_ch5w6"]
+[ext_resource type="Texture2D" uid="uid://v1iqg0uwj4xp" path="res://scenes/testitem3.png" id="2_1kgai"]
+
+[resource]
+script = ExtResource("1_ch5w6")
+sprite = ExtResource("2_1kgai")
+name = "Peppermint"
+health = 0.0
+mana = 0.0
+speed = 50.0
+cooldown = 1.0
+value = 30
+type = 2
+damage = 0.0
+attackSpeed = 0.0
+manaCost = 0.0

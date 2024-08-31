@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://co18toxk7f3ay"]
+
+[ext_resource type="Script" path="res://shopslot.gd" id="1_6uoii"]
+[ext_resource type="Resource" uid="uid://jpuckup2ysdf" path="res://scenes/testitem1.tres" id="2_616rp"]
+[ext_resource type="Resource" uid="uid://cqn0ele74b68w" path="res://scenes/testitem2.tres" id="3_7hb5r"]
+[ext_resource type="Resource" uid="uid://dip76wcgkenut" path="res://scenes/testitem3.tres" id="4_erwgv"]
+[ext_resource type="Resource" uid="uid://pyx770uoos3s" path="res://scenes/testitem4.tres" id="5_h4527"]
+[ext_resource type="Resource" uid="uid://bojkwl34xxdok" path="res://scenes/testitem5.tres" id="6_c6h51"]
+[ext_resource type="Resource" uid="uid://bgdmuhqn7tuqe" path="res://scenes/testitem6.tres" id="7_jhi3h"]
+[ext_resource type="FontFile" uid="uid://dbmafaop2gj3f" path="res://scenes/Poco.ttf" id="8_6au2o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2as6o"]
+radius = 27.1662
+
+[node name="ShopSlot" type="Node2D"]
+script = ExtResource("1_6uoii")
+items = Array[Resource("res://scenes/item.gd")]([ExtResource("2_616rp"), ExtResource("3_7hb5r"), ExtResource("4_erwgv"), ExtResource("5_h4527"), ExtResource("6_c6h51"), ExtResource("7_jhi3h")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+
+[node name="ShowText" type="Area2D" parent="."]
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShowText"]
+shape = SubResource("CircleShape2D_2as6o")
+
+[node name="UI" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+layout_mode = 2
+offset_left = -69.0
+offset_top = 2.0
+offset_right = 109.0
+offset_bottom = 43.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.0
+offset_right = 89.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="Name" type="RichTextLabel" parent="UI/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("8_6au2o")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]testname[/center]"
+fit_content = true
+
+[node name="Stats" type="RichTextLabel" parent="UI/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("8_6au2o")
+bbcode_enabled = true
+text = "[center]teststats123123123123[/center]"
+fit_content = true
+
+[connection signal="area_entered" from="ShowText" to="." method="_on_show_text_area_entered"]
+[connection signal="area_exited" from="ShowText" to="." method="_on_show_text_area_exited"]

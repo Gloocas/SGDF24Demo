@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpdh7v7au573r"]
+
+[ext_resource type="PackedScene" uid="uid://co18toxk7f3ay" path="res://scenes/shop_slot.tscn" id="1_fgkwm"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="ShopSlot" parent="." instance=ExtResource("1_fgkwm")]
+
+[node name="ShopSlot2" parent="." instance=ExtResource("1_fgkwm")]
+position = Vector2(55, 0)
+
+[node name="ShopSlot3" parent="." instance=ExtResource("1_fgkwm")]
+position = Vector2(110, 0)
+
+[node name="ShopSlot4" parent="." instance=ExtResource("1_fgkwm")]
+position = Vector2(0, 55)
+
+[node name="ShopSlot5" parent="." instance=ExtResource("1_fgkwm")]
+position = Vector2(55, 55)
+
+[node name="ShopSlot6" parent="." instance=ExtResource("1_fgkwm")]
+position = Vector2(110, 55)

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bgdmuhqn7tuqe"]
+
+[ext_resource type="Script" path="res://scenes/item.gd" id="1_xvpkr"]
+[ext_resource type="Texture2D" uid="uid://bi6movxkdnssl" path="res://scenes/testitem6.png" id="2_5mu1h"]
+
+[resource]
+script = ExtResource("1_xvpkr")
+sprite = ExtResource("2_5mu1h")
+name = "Baseball Bat"
+health = 10.0
+mana = 0.0
+speed = 25.0
+cooldown = 0.0
+value = 50
+type = 2
+damage = 10.0
+attackSpeed = 0.3
+manaCost = 0.0

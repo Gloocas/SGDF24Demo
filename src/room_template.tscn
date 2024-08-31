@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjowidxsi0cbp"]
+[gd_scene load_steps=10 format=3 uid="uid://bjowidxsi0cbp"]
 
 [ext_resource type="Texture2D" uid="uid://c7wxl7finxby1" path="res://assets/tilemapTest.png" id="2_28vhp"]
 [ext_resource type="Texture2D" uid="uid://c203nvnutto1" path="res://assets/TilesetsDownload/wall-8 - 2 tiles tall-transparency.png" id="2_abgsr"]
 [ext_resource type="PackedScene" uid="uid://dpi7a4qfsh1wm" path="res://src/player.tscn" id="2_fbbpv"]
 [ext_resource type="Texture2D" uid="uid://8gkg7twybj17" path="res://assets/TilesetsDownload/wall-8 - 2 tiles tall.png" id="3_ca6hc"]
+[ext_resource type="PackedScene" uid="uid://dpdh7v7au573r" path="res://scenes/shop.tscn" id="5_x6cut"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lap5y"]
 texture = ExtResource("2_28vhp")
@@ -120,3 +121,6 @@ layer_1/tile_data = PackedInt32Array(131075, 3, 1, 131076, 131075, 0, 131077, 13
 
 [node name="Player" parent="." instance=ExtResource("2_fbbpv")]
 position = Vector2(328, 186)
+
+[node name="Shop" parent="." instance=ExtResource("5_x6cut")]
+position = Vector2(306, 299)
