@@ -3,6 +3,8 @@ extends Control
 @onready var Server_IP = $Server_IP
 @onready var Device_IP = $Device_IP
 @onready var Server_Port = $Server_Port
+@onready var player : PackedScene = preload("res://src/player.tscn")
+@onready var world = get_parent()
 
 signal player_connected(peer_id, player_info)
 signal player_disconnected(peer_id)
@@ -49,11 +51,11 @@ func create_game():
 	var peer = ENetMultiplayerPeer.new()
 	var error = peer.create_server(7000, MAX_CONNECTIONS)
 	if error:
-		return error
+		return 0
 	multiplayer.multiplayer_peer = peer
-
 	players[1] = player_info
 	player_connected.emit(1, player_info)
+	return 1
 
 
 func remove_multiplayer_peer():
@@ -113,7 +115,16 @@ func _on_server_disconnected():
 
 func _on_join_pressed():
 	print(Server_IP.text)
-	join_game(Server_IP.text)
+	var try = join_game(Server_IP.text)
+	if true:
+		add_player()
 
 func _on_host_pressed():
 	create_game()
+
+func add_player(id = 1):
+	var player_inst = player.instantiate()
+	player_inst.global_position = Vector2(0,0)
+	world.add_child(player_inst)
+	#call_deferred("add_child", player_inst)
+	
