@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" path="res://src/player.gd" id="1_3kq2g"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4yy8p"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovwef"]
+size = Vector2(20, 8)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f6ioa"]
 
@@ -26,7 +27,8 @@ collision_layer = 2
 script = ExtResource("1_3kq2g")
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_4yy8p")
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_ovwef")
 
 [node name="FloorChecker" type="Area2D" parent="."]
 collision_layer = 8
