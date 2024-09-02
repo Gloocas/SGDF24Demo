@@ -6,6 +6,7 @@ class_name World
 @onready var camera = $Camera2D
 
 func _ready():
+	RenderingServer.set_default_clear_color(Color("000000"))
 	var network_inst = network.instantiate()
 	network_inst.global_position = Vector2(0,0)
 	self.add_child(network_inst)

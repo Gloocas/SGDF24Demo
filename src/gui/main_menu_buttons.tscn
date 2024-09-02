@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cn5fnail50hu"]
+
+[node name="MainMenuButtons" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 213.0
+offset_right = 740.0
+offset_bottom = 335.0
+text = "play game"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 364.0
+offset_right = 748.0
+offset_bottom = 491.0
+text = "quit"

@@ -4,12 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://ucqgp708n5b3" path="res://assets/6PV2Qk.png" id="2_my2j8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovwef"]
-size = Vector2(20, 8)
+size = Vector2(16, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1iel"]
-size = Vector2(10, 7)
+size = Vector2(12, 6)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_txxt8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd0gw"]
+size = Vector2(18, 30)
 
 [sub_resource type="SphereMesh" id="SphereMesh_yxpap"]
 
@@ -37,9 +38,10 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_my2j8")
 hframes = 15
 vframes = 8
+frame = 46
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10)
+position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_ovwef")
 
 [node name="FloorChecker" type="Area2D" parent="."]
@@ -47,7 +49,7 @@ collision_layer = 8
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FloorChecker"]
-position = Vector2(0, 12)
+position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_n1iel")
 
 [node name="HurtArea" type="Area2D" parent="."]
@@ -55,7 +57,8 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="HurtBox" type="CollisionShape2D" parent="HurtArea"]
-shape = SubResource("CapsuleShape2D_txxt8")
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_jd0gw")
 
 [node name="Shadow" type="MeshInstance2D" parent="."]
 modulate = Color(0.172833, 0.172833, 0.172833, 0.345098)

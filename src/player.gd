@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var floorArea := $FloorChecker
 @onready var animPlayer := $AnimationPlayer
 @onready var hurtBox := $HurtArea/HurtBox
+@onready var sprite = $Sprite2D
 
 var Speed := 0.0
 var topSpeed := 150.0
