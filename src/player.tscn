@@ -1,11 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpi7a4qfsh1wm"]
 
 [ext_resource type="Script" path="res://src/player.gd" id="1_3kq2g"]
+[ext_resource type="Texture2D" uid="uid://ucqgp708n5b3" path="res://assets/6PV2Qk.png" id="2_my2j8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovwef"]
 size = Vector2(20, 8)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_f6ioa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1iel"]
 size = Vector2(10, 7)
@@ -28,8 +27,16 @@ properties/0/spawn = true
 properties/0/replication_mode = 1
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_3kq2g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_my2j8")
+hframes = 15
+vframes = 8
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
@@ -38,11 +45,6 @@ shape = SubResource("RectangleShape2D_ovwef")
 [node name="FloorChecker" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 4
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="FloorChecker"]
-position = Vector2(3.57628e-07, 4.20213e-06)
-scale = Vector2(20, 15)
-mesh = SubResource("CapsuleMesh_f6ioa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FloorChecker"]
 position = Vector2(0, 12)

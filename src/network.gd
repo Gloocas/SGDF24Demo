@@ -91,6 +91,8 @@ func _on_join_pressed():
 	peer.create_client("localhost", 135)
 	multiplayer.multiplayer_peer = peer
 	#add_player()
+	self.visible = false
+	world.spawn_world()
 
 func _on_host_pressed():
 	#create_game()
@@ -99,6 +101,8 @@ func _on_host_pressed():
 	multiplayer.multiplayer_peer = peer
 	multiplayer.peer_connected.connect(add_player)
 	add_player()
+	self.visible = false
+	world.spawn_world()
 
 func add_player(id = 1):
 	var player_inst = player.instantiate()

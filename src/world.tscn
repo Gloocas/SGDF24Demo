@@ -6,6 +6,7 @@
 script = ExtResource("1_alck7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+y_sort_enabled = true
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("res://src/player.tscn")
