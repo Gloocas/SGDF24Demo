@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var floorArea := $FloorChecker
 @onready var animPlayer := $AnimationPlayer
 @onready var hurtBox := $HurtArea/HurtBox
+@onready var sprite = $Sprite2D
 
 var Speed := 0.0
 var topSpeed := 150.0
@@ -18,20 +19,18 @@ var canDodge := true
 var hDirection := 0.0
 var vDirection := 0.0 
 
+func _enter_tree():
+	set_multiplayer_authority(name.to_int())
  
 func _physics_process(delta):
-	#print(canDash)
-	handle_input(delta)
-	if Input.is_action_just_pressed("Dash"):
-		dash()
-	elif Input.is_action_just_pressed("Dodge"):
-		dodge()
-		
+	if is_multiplayer_authority():
+		handle_input(delta)
+		if Input.is_action_just_pressed("Dash"):
+			dash()
+		elif Input.is_action_just_pressed("Dodge"):
+			dodge()
 	move_and_slide()
-	
-	
-	
-	
+
 func dash():
 	if canDash:
 		Speed *= 3
@@ -65,7 +64,7 @@ func dodge():
 func handle_input(delta):
 	hDirection = Input.get_axis("Left", "Right")
 	vDirection = Input.get_axis("Up", "Down")
-	if floorArea.has_overlapping_bodies(): #if player's area isn't within floor area, remove movement and add gravity
+	if true: #floorArea.has_overlapping_bodies(): #if player's area isn't within floor area, remove movement and add gravity
 		if hDirection and vDirection:
 			Speed = move_toward(Speed, topSpeed, SPEED_INC) #slowed velocity's to account for increased movement
 			velocity.x = hDirection * Speed / 1.4
