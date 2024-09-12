@@ -6,6 +6,7 @@
 script = ExtResource("1_alck7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 y_sort_enabled = true
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]

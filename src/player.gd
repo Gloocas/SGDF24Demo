@@ -64,6 +64,16 @@ func dodge():
 func handle_input(delta):
 	hDirection = Input.get_axis("Left", "Right")
 	vDirection = Input.get_axis("Up", "Down")
+	if hDirection == 1:
+		animPlayer.play("walk_right")
+	elif hDirection == -1:
+		animPlayer.play("walk_left")
+	elif vDirection == 1:
+		animPlayer.play("walk_down")
+	elif vDirection == -1:
+		animPlayer.play("walk_up")
+	else:
+		animPlayer.play("idle")
 	if true: #floorArea.has_overlapping_bodies(): #if player's area isn't within floor area, remove movement and add gravity
 		if hDirection and vDirection:
 			Speed = move_toward(Speed, topSpeed, SPEED_INC) #slowed velocity's to account for increased movement
